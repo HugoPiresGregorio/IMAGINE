@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>IMAGINE</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <canvas id="canvas" width="800" height="520"></canvas>
+
+      <div class="panel" aria-label="Controles">
+        <div>
+          <label><strong>Controles</strong></label>
+          <div class="row">
+            <button id="clearBtn" class="small" title="Limpar tela">
+              🧹 Limpar
+            </button>
+            <button
+              id="gravityBtn"
+              class="small"
+              title="Alternar direção da gravidade"
+            >
+              🌍 Gravidade
+            </button>
+          </div>
+          <div class="legend muted">
+            Gravidade atual: <span id="gravLabel">baixo</span>
+          </div>
+        </div>
+
+        <div>
+          <label for="intensity">Intensidade da gravidade</label>
+          <input
+            id="intensity"
+            type="range"
+            min="0"
+            max="4"
+            step="0.1"
+            value="0.8"
+          />
+          <div class="legend muted">Aceleração aplicada às gotas</div>
+        </div>
+
+        <div>
+          <label for="specialProb">Prob. cores especiais</label>
+          <input
+            id="specialProb"
+            type="range"
+            min="0"
+            max="0.5"
+            step="0.01"
+            value="0.08"
+          />
+          <div class="legend muted">
+            Aumente para ver mais dourado/prata/neon
+          </div>
+        </div>
+
+        <div>
+          <label for="rate">Taxa de geração</label>
+          <input id="rate" type="range" min="1" max="30" step="1" value="10" />
+          <div class="legend muted">Partículas por movimento</div>
+        </div>
+
+        <div>
+          <label><strong>Paleta</strong></label>
+          <div class="muted">Cores normais + especiais raras</div>
+        </div>
+
+        <div>
+          <label for="maxParticles">Limite de partículas</label>
+          <input
+            id="maxParticles"
+            type="range"
+            min="500"
+            max="8000"
+            step="100"
+            value="3000"
+          />
+          <div class="legend muted">
+            Evite valores muito altos em dispositivos fracos
+          </div>
+        </div>
+
+        <div style="margin-top: 6px">
+          <div class="muted">
+            Dica: use touch ou mouse; clique e arraste para "derramar".
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
